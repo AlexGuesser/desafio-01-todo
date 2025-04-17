@@ -1,0 +1,118 @@
+.taskItem {
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    padding: 1rem; /* 16px */
+    display: flex;
+    align-items: flex-start; /* Alinha no topo para textos longos */
+    gap: 0.75rem; /* 12px */
+    width: 100%;
+    max-width: 46rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Adiciona margem entre os itens da lista */
+  .taskItem {
+    margin-top: 0.75rem; /* 12px */
+  }
+  
+  .checkboxContainer {
+    min-width: 1.5rem; /* Garante espaço para o checkbox */
+    height: 1.5rem; /* Garante espaço para o checkbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Esconde o input original */
+  .checkboxContainer input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  
+  /* Estilo base para o "checkbox" visual */
+  .checkboxVisual {
+    min-width: 1.125rem; /* 18px */
+    height: 1.125rem; /* 18px */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s, border-color 0.1s;
+  }
+  
+  /* Estilo não checado */
+  .checkboxUnchecked {
+    border: 2px solid var(--blue);
+    background: transparent;
+  }
+  
+  .checkboxUnchecked:hover {
+    border-color: var(--blue-dark);
+    background: rgba(30, 111, 159, 0.2); /* blue-dark com opacidade */
+  }
+  
+  /* Estilo checado */
+  .checkboxChecked {
+    border: 2px solid var(--purple-dark);
+    background: var(--purple-dark);
+    color: var(--gray-100); /* Cor do ícone check */
+  }
+  
+  .checkboxChecked:hover {
+    border-color: var(--purple);
+    background: var(--purple);
+  }
+  
+  .checkboxChecked svg {
+    width: 0.75rem; /* 12px */
+    height: 0.75rem; /* 12px */
+  }
+  
+  
+  .taskText {
+    flex: 1;
+    color: var(--gray-100);
+    font-size: 0.875rem; /* 14px */
+    line-height: 140%;
+    /* Permite quebra de linha */
+    word-break: break-word;
+    /* Alinha com o topo do checkbox */
+    margin-top: 0.125rem;
+  }
+  
+  .taskTextCompleted {
+    color: var(--gray-300);
+    text-decoration: line-through;
+  }
+  
+  .deleteButton {
+    background: transparent;
+    border: none;
+    color: var(--gray-300);
+    cursor: pointer;
+    line-height: 0; /* Evita altura extra */
+    border-radius: 2px;
+    padding: 0.2rem; /* Pequeno padding para área de clique */
+  
+    margin-left: auto; /* Empurra para a direita */
+    /* Alinha com o topo do texto */
+    margin-top: 0.125rem;
+  
+    transition: color 0.1s, background-color 0.1s;
+  }
+  
+  .deleteButton:hover {
+    color: var(--danger);
+    background-color: var(--gray-400);
+  }
+  
+  .deleteButton svg {
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+  } 

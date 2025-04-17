@@ -1,0 +1,53 @@
+.newTask {
+  display: flex;
+  gap: 0.5rem; /* 8px */
+  padding: 0 1rem; /* Adapte se necessário com base no container pai */
+  margin-top: -1.6875rem; /* Ajuste para sobrepor o header, -27px */
+  width: 100%;
+  max-width: 46rem; /* 736px - Mesmo max-width do container geral */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newTask input {
+  flex: 1;
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem; /* 16px */
+  font-size: 1rem; /* 16px */
+  line-height: 140%;
+}
+
+.newTask input::placeholder {
+  color: var(--gray-300);
+}
+
+.newTask button {
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem; /* 16px */
+  font-weight: bold;
+  font-size: 0.875rem; /* 14px */
+  line-height: 140%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px */
+
+  transition: background-color 0.1s;
+}
+
+.newTask button:hover {
+  background: var(--blue);
+}
+
+/* Ajuste opcional para o tamanho do ícone se necessário */
+/* .newTask button svg {
+  width: 1rem; /* 16px */
+/* height: 1rem; /* 16px */
+/* } */
